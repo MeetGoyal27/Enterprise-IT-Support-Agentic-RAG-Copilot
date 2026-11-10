@@ -17,7 +17,7 @@ def llm():
     global _llm
     if _llm is None:
         if not settings.groq_api_key:
-            raise RuntimeError("OPENAI_API_KEY is missing")
+            raise RuntimeError("GROQ_API_KEY is missing")
         _llm = ChatGroq(
             model=settings.groq_model,
             temperature=0,
